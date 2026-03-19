@@ -1,0 +1,18 @@
+---
+title: "Distributed Job Scheduler"
+---
+
+## 🚧 Problem
+Schedule and execute jobs at scale.
+
+## 🎯 Requirements
+- Handle 10k jobs/sec
+- Retry failures
+
+## 🏗️ Design
+- Queue (Redis)
+- Workers
+- Scheduler service
+
+## ⚖️ Tradeoffs
+Polling vs event-driven
