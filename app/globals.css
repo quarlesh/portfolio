@@ -5,3 +5,18 @@
 body {
   font-family: sans-serif;
 }
+
+
+.datatype-font {
+  font-family: "Datatype", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.img-circle {
+  clip-path: circle(closest-side at 50% 50%);
+  width: 100px;
+}

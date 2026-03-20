@@ -1,13 +1,14 @@
 import { Hero } from "@/components/sections/hero";
 import { Featured } from "@/components/sections/featured";
-import { SystemPreview } from "@/components/sections/system-preview";
+import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <div className="space-y-16">
-      <Hero />
+      <Card>
+        <Hero />
+      </Card>
       <Featured />
-      <SystemPreview />
     </div>
   );
 }

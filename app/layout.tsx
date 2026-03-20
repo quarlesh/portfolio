@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body className="bg-gray-50 text-gray-800">
         <Navbar />
         <Container>{children}</Container>
         <Footer />
