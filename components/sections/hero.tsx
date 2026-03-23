@@ -21,9 +21,9 @@ export function Hero() {
         <Button variant="primary">
           <a href="/projects">View Projects</a>
         </Button>
-        <Button variant="primary">
+        {/* <Button variant="primary">
           <a href="/designs">View Designs</a>
-        </Button>
+        </Button> */}
       </div>
     </section>
   );

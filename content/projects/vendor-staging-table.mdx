@@ -1,0 +1,23 @@
+---
+title: "Vendor Staging Table"
+---
+
+## ⚠️ Problem
+We consumed data about vendors that the company partnered with on construction projects and loaded the information into a third party system via code integration, but when the data didn't show up downstream, we had no visibility into what went wrong and how to troubleshoot.
+
+## 🎯 Requirements
+- Some way to maintain history of what data was received and when
+- Ability to retry records that failed to load into the third party system
+- Ability to filter out non relevant messages from upstream producer
+
+## 🔧 Design
+- PostgreSQL table to store incoming vendor Kafka messages before processing
+- Boolean flag to represent failure/success at processing time
+- Boolean flag to denote which records are received and should be processed, and which were received and should be ignored
+- Scheduler to purge ignored records after a given time period
+- Processor to send valid data to third party system and update the success flag
+- Retry logic to attempt failed records at a fixed interval and under a max retry value
+
+## 📈 Business Impact
+Prior to this change, if there were any issues that came up for support regarding vendors, we were unable to troubleshoot what happened because we immediately lose visibility to the payload after initial processing. 
+Now, we are able to see a history of messages received, can attempt reprocessing, and the code will retry on its own if something fails.

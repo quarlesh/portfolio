@@ -11,6 +11,16 @@ const projects = [
     title: "Workflow Data Validations",
     description: "Validate different data points on financial transactions subject to workflows functionality",
   },
+  {
+    slug: "metrics-api",
+    title: "Metrics API",
+    description: "Easy to implement solution for tracking all API calls made to third party system across company environment",
+  },
+  {
+    slug: "vendor-staging-table",
+    title: "Vendor Staging Table",
+    description: "Troubleshooting safeguard against lost data after failure to process into third party system",
+  },
 ];
 
 export default function ProjectsPage() {

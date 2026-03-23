@@ -3,11 +3,20 @@ title: "Workflow Data Validations"
 ---
 
 ## ⚠️ Problem
+In the workflow process for financial transactions (invoices, contracts, change orders) we want to be able to stop it from going to the step for the first level approver if there is some problem with the record. 
+The third party system doesn't allow us to make certain fields required or natively do any validation on the records so I built it into the workflow integration.
 
 ## 🎯 Requirements
-- 
+- Fast response time to the user after submitting data
+- Visible error message to detail what was wrong with the form the user submitted
+- Built directly into the integration code, no native functionality available
 
 ## 🔧 Design
-- 
+- Scheduler run every minute to ensure fast turnaround time on error messages
+- Clean decision tree in code with most common errors caught first to ensure minimal extra processing time
+- Java API solution to write back error message generated to the third party system in an easy to read comment section of the site
 
 ## 📈 Business Impact
+These data validations will prevent users from submitting financial transactions that have data on them that will cause errors in a downstream environment. 
+Users will be given an error message detailing what's wrong with the transaction and they'll have the opportunity to correct and resubmit. 
+As mentioned, there is no way to do any validation natively in the third party system, so it was important that it was built directly into the integration.
