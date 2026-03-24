@@ -1,16 +1,21 @@
+import PDFViewer from "@/components/pdf/PDFViewer";
+import { Button } from "@/components/ui/button";
+
 export default function ResumePage() {
   return (
-    <div>
+    <div className="resume-div">
       <h1 className="text-3xl font-bold mb-6 datatype-font">Resume</h1>
-
-      <div className="grid gap-6">
-        <embed
-          src="Resume_Haylee_Quarles_February_2026.pdf"
-          type="application/pdf"
-          width="100%"
-          height="600px"
-        />
+      <div className="flex">
+        <Button variant="primary">
+          <a
+            href="Resume_Haylee_Quarles_March_2026.pdf"
+            download="haylee_quarles_resume.pdf"
+          >
+            Download Resume
+          </a>
+        </Button>
       </div>
+      <PDFViewer />
     </div>
   );
 }
