@@ -18,7 +18,7 @@ const PDFViewerClient = () => {
         }}
       >
         <Document
-          file="Resume_Haylee_Quarles_March_2026.pdf"
+          file="Haylee_Quarles_Resume_March_2026.pdf"
           loading={
             <div style={{ padding: "2rem", textAlign: "center" }}>
               Loading PDF...
