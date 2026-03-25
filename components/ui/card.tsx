@@ -11,10 +11,9 @@ export function Card({
   return (
     <div
       className={clsx(
-        "border border-gray-800 rounded-2xl p-5",
-        "bg-gray-950/50 backdrop-blur",
-        "transition-all duration-200",
-        "hover:border-gray-700 hover:bg-gray-900/60",
+        "border border-gray-200 rounded-2xl p-5",
+        "bg-white shadow-md",
+        "text-gray-800",
         className
       )}
     >

@@ -5,7 +5,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+      typography: ({ theme }) => ({
+        graycustom: {
+          css:{
+            "--tw-prose-headings": theme("colors.gray.800"),
+            "--tw-prose-body": theme("colors.gray.600"),
+          }
+        }
+      }),
+      }
+    },
   plugins: [require("@tailwindcss/typography")],
 };

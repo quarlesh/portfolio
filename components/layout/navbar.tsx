@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/projects", label: "Projects" },
-  { href: "/systems", label: "Systems" },
+  { href: "/designs", label: "Designs" },
   { href: "/blog", label: "Blog" },
+  { href: "/resume", label: "Resume" },
   { href: "/about", label: "About" },
 ];
 
@@ -14,7 +15,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-gray-800">
+    <header className="border-b border-gray-200">
       <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo / Name */}
@@ -33,8 +34,8 @@ export function Navbar() {
                 href={link.href}
                 className={`text-sm transition-colors ${
                   isActive
-                    ? "text-white"
-                    : "text-gray-400 hover:text-white"
+                    ? "text-gray-800"
+                    : "text-gray-600 hover:text-emerald-600"
                 }`}
               >
                 {link.label}

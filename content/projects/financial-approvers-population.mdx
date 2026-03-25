@@ -1,0 +1,27 @@
+---
+title: "Financial Approvers Population Application"
+---
+
+## ⚠️ Problem
+Needed a way to populate approvers of financial transactions from internal HR data source to external 3rd party vendor system.
+
+## 🎯 Requirements
+- SOX Compliant
+- Performant for 3000+ projects
+
+## 🔧 Design
+- Java, Spring Boot, React and Typescript
+- PostgreSQL database
+- RESTful APIs to connect to HR data system
+- Recursive strategy to parse out reports to hierarchy information
+- RESTful API to send information to 3rd party system
+- Scheduled job to run any bulk submits at the top of every hour to allow user to come back later to a finished update
+
+## 📈 Business Impact
+Prior to the development of this application, users had to manually assign every single approver to every single project in the third party system. 
+There was no way to pull HR leader hierarchy or position names, so the process was very prone to user error. 
+There was also no validation to ensure that every approver was set up properly, leading to empty fields where there should have been a name. 
+Now, we allow users to enter one name and it pulls the hierarchy information from HR data, eliminating the need for the user to enter every single person by hand. 
+It also performs some validation based on a user maintained "directory" of approvers to make sure that the right approver is being assigned to each step. 
+This is especially important as these approvers have authorization to approve financial transactions in the third party system, so it's important that the right name is in the right spot. 
+This saw an estimated ~1700 annual hours savings in efficiency.

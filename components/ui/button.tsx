@@ -20,15 +20,15 @@ export function Button({
         
         {
           // Primary
-          "bg-white text-black hover:bg-gray-200":
+          "bg-emerald-500 text-white hover:hover:bg-emerald-600 datatype-font":
             variant === "primary",
 
           // Secondary
-          "bg-gray-900 text-white border border-gray-700 hover:bg-gray-800":
+          "bg-gray-300 text-gray-800 hover:bg-gray-400 datatype-font":
             variant === "secondary",
 
           // Ghost
-          "text-gray-400 hover:text-white hover:bg-gray-900":
+          "text-gray-400 hover:text-white hover:bg-gray-900 datatype-font":
             variant === "ghost",
         },
 

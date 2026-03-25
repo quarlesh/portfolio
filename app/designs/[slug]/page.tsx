@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getMDXContent } from "@/lib/mdx";
 import { Card } from "@/components/ui/card";
 
-export default async function ProjectPage({
+export default async function DesignPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -13,7 +13,7 @@ export default async function ProjectPage({
 
   try {
     const { content, meta } = await getMDXContent(
-      `projects/${slug}`
+      `designs/${slug}`
     );
 
     return (
