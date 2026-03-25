@@ -26,7 +26,10 @@ body {
 }
 
 .resume-div {
-  height: 100%
+    /* Define the original size, e.g., 800px x 600px */
+    width: 100vw;
+    transform: scale(0.5); /* Scale down by 50% */
+    transform-origin: top left; /* Scale from the top-left corner */
 }
 
 /* 00bc7d - hex code for emerald-500 */

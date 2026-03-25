@@ -10,12 +10,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 const PDFViewerClient = () => {
   return (
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "2rem", display: "flex", overflow: "auto" }}>
       <div
         style={{
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
       >
         <Document
