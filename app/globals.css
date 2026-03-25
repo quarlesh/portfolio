@@ -20,3 +20,7 @@ body {
   clip-path: circle(closest-side at 50% 50%);
   width: 100px;
 }
+
+.img-about {
+  width: 25%;
+}

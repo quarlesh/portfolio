@@ -1,0 +1,21 @@
+---
+title: "Metrics API"
+---
+
+## ⚠️ Problem
+Frequently, the rate limit was being hit for API calls in our company environment to the third party system we worked with.
+We were very in the dark about which services generated the most traffic to that system, so there was a need for a tool to track API call frequency.
+
+## 🎯 Requirements
+- Easy to implement with a low code solution in every service we owned
+- Ability to track timestamp, target URI, request body, and calling service
+- Purge cycle and ability to toggle on/off to avoid database storage size creep
+
+## 🔧 Design
+- Simple Java API call to an internal PostgreSQL database to log every time API calls were made
+- Timestamp, payload, URI, and calling service saved as a PostgreSQL record
+- Restructuring of some services into modern format where all API calls to the third party system are made from one file - easy to introduce this new metrics logic in one place
+- Scheduler implemented to delete old data past a certain time period to ensure data table size stays under control
+
+## 📈 Business Impact
+We were notified that we are routinely hitting our rate limit with the third party system, so understanding where the heavy load on our internal system is was important to identify so that we can make adjustments to job timing and code structure to lessen the frequency of API calls to the third party.
