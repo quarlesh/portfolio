@@ -8,7 +8,7 @@ export default function ResumePage() {
       <div className="flex">
         <Button variant="primary">
           <a
-            href="Haylee_Quarles_Resume_March_2026.pdf"
+            href="Quarles_Haylee_Resume.pdf"
             download="haylee_quarles_resume.pdf"
           >
             Download Resume
